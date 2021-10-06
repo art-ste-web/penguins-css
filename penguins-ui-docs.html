@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документація PengUIns CSS</title>
+    <link rel="stylesheet" href="css/penguins-ui.css">
+    <link rel="stylesheet" href="css/penguins-ui-docs.css">
+</head>
+<body class="p_ui">
+    <main class="p_ui-container">
+        <h1 class="logo">Peng<span class="red-letter">UI</span>ns CSS</h1>
+        <p class="desc">Міні CSS бібліотека команди Penguins</p>
+        <section>
+            <h2>Що це і для чого?</h2>
+            <p>Якщо потрібно швидко сворити простий HTML документ,
+                а на форматування та написання CSS немає часу - можна використати уже готові стилі форматування 
+                елементів
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>Як підключити?</h2>
+            <p>Додати файл <a href="css/penguins-ui.css">penguins-ui.css</a>
+                до свого проекту та підключити його в HTML файлі з допомогою тегу <code>&lt;link&gt;</code>:
+            </p>
+            <p>
+                <code>
+                    &lt;link rel=<span class="code-string">"stylesheet"</span> href=<span class="code-string">"penguins-ui.css"</span>&gt;
+                </code>
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>Як використовувати?</h2>
+            <p>
+                Потрібно додати клас <code>.p_ui</code> до тегу <code>&lt;body&gt;</code>.
+                Після цього стилі автоматично будуть застосовані до елементів сторінки.
+            </p>
+            <h3>Структура документу</h3>
+            <p>
+                Схема базової структури документу:
+            </p>
+            <p>
+                <img src="res/struct.jpg" alt="">
+            </p>
+            <h3>Приклад HTML розмітки</h3>
+            <code class="code-block">
+                &lt;body class=<span class="code-string">"p_ui"</span>&gt;
+                <div class="code-margin">
+                    &lt;main class=<span class="code-string">"p_ui-container"</span>&gt;
+                    <br>
+                    <div class="code-margin">
+                        &lt;section&gt;
+                        <div class="code-margin">
+                            &lt;h2&gt;<span class="code-tag-inner">Lorem ipsum</span>&lt;/h2&gt;
+                                <br>&lt;hr&gt;
+                                <br>&lt;p&gt;<span class="code-tag-inner">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                 Ea minima sequi sunt voluptatibus, rem praesentium dolorum.</span>
+                                 &lt;/p&gt;
+                        </div>
+                         &lt;/section&gt;
+                    </div>
+                     &lt;/main&gt;
+                    </div>
+                    &lt;/body&gt;
+            </code>
+        </section>
+        <hr>
+        <section>
+            <h2>Основні компоненти</h2>
+            <h3>Заголовки <code>&lt;h1&gt;-&lt;h5&gt;</code>:</h3>
+            <h1>Заголовок 1</h1>
+            <h2>Заголовок 2</h2>
+            <h3>Заголовок 3</h3>
+            <h4>Заголовок 4</h4>
+            <h5>Заголовок 5</h5>
+            <h3>Параграф тексту <code>&lt;p&gt;</code> та посилання <code>&lt;a&gt;</code>:</h3>
+            <p>
+                По весні <a target="_blank" href="http://www.nbuv.gov.ua/node/4171">1663 року</a> двоє подорожніх, верхи на добрих конях,
+                 ізближались до Києва з Білогородського шляху. Один був молодий
+                  собі козак, збройний, як до війни; другий по одежі і по сивій 
+                  бороді, сказать би, піп, а по шаблюці під рясою, по пістолях 
+                  за поясом і по довгих шрамах на виду — старий "козарлюга".
+                   Коні в їх потомлені, одежа й тороки позапилювані: зараз було
+                 знати, що ідуть не зблизька.
+            </p>
+            <h3>Маркерований список <code>&lt;ul&gt;</code>:</h3>
+            <ul>
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+                <li>Пункт 3</li>
+                <li>Пункт 4</li>
+            </ul>
+            <h3>Виділений текст, цитата <code>&lt;blockqoute&gt;</code>:</h3>
+            <blockquote>
+                Коні в їх потомлені, одежа й тороки позапилювані: зараз було
+                знати, що ідуть не зблизька.
+            </blockquote>
+            <h3>Горизонтальна лінія <code>&lt;hr&gt;</code>:</h3>
+            <hr>
+            <h3>Блок коду <code>&lt;code&gt;</code>:</h3>
+            <code class="code-block">
+                &lt;head&gt;
+                    <div class="code-margin">
+                        &lt;meta charset=<span class="code-string">"UTF-8"</span>&gt;
+                        <br>&lt;meta http-equiv=<span class="code-string">"X-UA-Compatible"</span> content=<span class="code-string">"IE=edge"</span>&gt;
+                        <br>&lt;meta name=<span class="code-string">"viewport"</span> content=<span class="code-string">"width=device-width, initial-scale=1.0"</span>&gt;
+                        <br>&lt;title&gt;<span class="code-tag-inner">Документація PengUIns CSS</span>&lt;title&gt;
+                        <br>&lt;link rel=<span class="code-string">"stylesheet"</span> href=<span class="code-string">"css/penguins-ui.css"</span>&gt;
+                        <br>&lt;link rel=<span class="code-string">"stylesheet"</span> href=<span class="code-string">"css/penguins-ui-docs.css"</span>&gt;
+                    </div>
+                &lt;/head&gt;
+            </code>
+            
+            <h4>Примітки до форматування коду:</h4>
+            <ul>
+                <li>клас<code>"code-block"</code> додає властивість <code>display: block</code></li>
+                <li>для виділення рядків використовується клас <code>"code-string"</code></li>
+                <li>для виділення CSS класів використовується клас <code>"code-class"</code></li>
+                <li>для створення відступів використовується клас <code>"code-margin"</code></li>
+                <li>для виділення вмісту HTML тегу використовується клас <code>"code-tag-inner"</code></li>
+            </ul>
+            <p>Приклад HTML розмітки коду:</p>
+            <code class="code-block">
+                &lt;code class="code-block"&gt;<br>
+                &lt;span class="code-class"&gt;.p_ui blockquote&lt;/span&gt; {&lt;br&gt; <br>
+                    &lt;div class="code-margin"&gt;font-size:  &lt;span class="code-string"&gt;18px&lt;/span&gt;;&lt;br&gt; <br>
+                    margin: &lt;span class="code-string"&gt;32px 16px 32px 48px&lt;/span&gt;;&lt;br&gt; <br>
+                    padding: &lt;span class="code-string"&gt;32px 8px 32px 16px&lt;/span&gt;;&lt;br&gt; <br>
+                    font-family: &lt;span class="code-string"&gt;'Inter', sans-serif&lt;/span&gt;;&lt;br&gt; <br>
+                    font-weight: &lt;span class="code-string"&gt;700&lt;/span&gt;;&lt;br&gt; <br>
+                    &lt;/div&gt;&lt;br&gt; <br>
+                }&lt;br&gt; <br>
+                &lt;/code&gt;
+            </code>
+            <p>Результат:</p>
+            <code class="code-block">
+                <span class="code-class">.p_ui blockquote</span> {
+                    <div class="code-margin">font-size: <span class="code-string">18px</span>;
+                    <br>margin: <span class="code-string">32px 16px 32px 48px</span>;
+                    <br>padding: <span class="code-string">32px 8px 32px 16px</span>;
+                    <br>font-family: <span class="code-string">'Inter', sans-serif</span>;
+                    <br>font-weight: <span class="code-string">700</span>;
+                </div>
+                }
+            </code>
+        </section>
+        <hr>
+        <h4>Наступні розділи в розробці...</h4>
+    </main>
+</body>
+</html>
