@@ -233,12 +233,12 @@
         <article>
             <h4>Поле для форми</h4>
             <div class="form-area">
-                <div class="form-cage">
+                <div class="form-cage"></div>
                     <div class="form-h" method="get">Зворотній зв'язок</div>
                     <form action="#" method="POST" enctype="multipart/form-data" class="form__body">
                         <div><input class="form-name form-input" autocomplete="off" type="text" name="name" placeholder="Name">
                         </div>
-                        <div><input class="form-phone form-input" type="text" name="mail_phone"
+                        <div><input class="form-input" type="text" name="mail_phone"
                                 placeholder="E-mail or phone number"></div>
                         <div><textarea class="form-text form-input" name="text"
                                 placeholder="Your message"></textarea></textarea>
@@ -247,6 +247,13 @@
                     </form>
                 </div>
             </div>
+            <h4>Примітки до форми:</h4>
+            <ul>
+                <li>клас<code>"form-cage"</code> контейнер для форми, додає відступи</li>
+                <li>клас<code>"form-h"</code> стилізує заголовок форми</li>
+                <li>клас<code>"form-input" "form-text"</code> стилізація полів вводу форми</li>
+                <li>клас<code>"form-btn"</code> стиль кнопки відправки</li>
+            </ul>
         </article>
     </main>
 </body>
