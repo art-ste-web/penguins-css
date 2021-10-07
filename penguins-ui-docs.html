@@ -257,10 +257,26 @@
             </ul>
             <hr>
         </article>
-        <article>
-            <h4>CSS позиціонування. Різниця між <code>relative</code> та <code>absolute</code></h4>
-
-        </article>
     </main>
+    <section class="section-container">
+        <h4>CSS позиціонування. Різниця між <code>relative</code> та <code>absolute</code></h4>
+        <div class="position-container">
+            <div class="position-block">Я звичайний блок з <code>position: static</code> як і у всіх блоків за
+                замовчуванням.
+            </div>
+        </div>
+        <div class="position-container"><div class="extra-padding">Я його елемент <br>вищого рівня ---></div>
+            <div class="position-block-absolute">Я блок з <code>position: absolute; left: 200px; bottom: 10px;</code>. Я не впливаю
+                на оточуючі блоки, та зміщуюся відносно елементу вищого рівня на відстані, вказані за допомогою властивостей
+                <code>left, right, top, bottom</code>. Елемент вищого рівня має отримати властивість <code>position: relative</code>, інакше я буду позиціонуватися відносно всієї сторінки взагалі.
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="position-block-relative">Я блок з <code>position: relative; right: 50px; top: 20px;</code>. Я впливаю
+            на оточуючі блоки, та зміщуюся відносно своєї позиції на відстані, вказані за допомогою властивостей
+            <code>left, right, top, bottom</code>.
+            </div>
+        </div>
+    </section>
 </body>
 </html>

@@ -155,7 +155,7 @@ html {
     color: var(--text-black);
     border-left: 10px solid var(--accent-red);
 }
-/* <<<<<<< HEAD */
+/* form */
 .form-area {
   background-color: inherit;
   -webkit-box-flex: 1;
@@ -233,4 +233,43 @@ table caption {
 table th, td {
     padding: 18px;
 /* >>>>>>> f580efe65112a2d17e919a9e0c6849049df0d65a */
+}
+/* position */
+.section-container {
+    max-width: 1140px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+.position-container {
+    position: relative;
+    border: 5px solid var(--dark-grey);
+    margin: 30px 0;
+    background-color: var(--light-grey);
+    min-height: 100px;
+}
+.position-block {
+    display: block;
+    border: 1px solid var(--accent-red);
+    padding: 20px;
+    background-color:lightgreen
+    
+}
+.position-block-absolute {
+    position: absolute;
+    left: 200px;
+    bottom: 10px;
+    background-color: lavenderblush;
+    border: 1px solid var(--accent-red);
+    padding: 20px;
+}
+.position-block-relative {
+    position: relative;
+    right: 50px;
+    top: 20px;
+    background-color: lavenderblush;
+    border: 1px solid var(--accent-red);
+    padding: 20px;
+}
+.extra-padding {
+    padding: 20px 0 0 30px;
 }
