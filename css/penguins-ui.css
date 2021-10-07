@@ -164,16 +164,15 @@ html {
 }
 
 .form-cage {
-  padding: 7.5% 20% 3% 9%;
+  padding: 30px 20% 3% 9%;
 }
 
 .form-h {
-  color: inherit;
+  color: var(--medium-grey);
   font-size: 25px;
+  font-weight: 600;  
   line-height: 25px;
-  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   padding-bottom: 20px;
 }
 
