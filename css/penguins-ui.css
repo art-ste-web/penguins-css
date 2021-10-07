@@ -1,5 +1,3 @@
-/*normalize css*/
-/* @import url('normalize.css'); */
 /*fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Source+Code+Pro&display=swap');
 
@@ -20,12 +18,17 @@
 }
 
 /*global styles (if class p-ui added to body)*/
+html {
+    scroll-behavior: smooth;
+}
 .p_ui {
     font-family: var(--main-font);
     color: var(--text-black);
     box-sizing: border-box;
+    margin: 0;
+    
 }
-/*layout*/
+/*LAYOUT*/
 /*container*/
  .p_ui-container {
     display: flex;
@@ -39,6 +42,7 @@
     display: block;
     margin: 16px 0 0 0;
 }
+
 /*hr*/
 .p_ui hr {
     height: 5px;
@@ -47,7 +51,7 @@
     border-radius: 3px;
     margin: 32px 0 0 0;
 }
-/*text elements*/
+/*TEXT ELEMENTS*/
 /*headers*/
 .p_ui h1 {
     font-size: 40px;
@@ -90,6 +94,9 @@
     list-style-type: none;
     font-size: 20px;
     margin: 12px 0 0 0;
+}
+.p_ui ul li {
+    margin-top: 8px;
 }
 .p_ui ul li::before {
     content: "\2022";
@@ -147,4 +154,25 @@
     line-height: 19px;
     color: var(--text-black);
     border-left: 10px solid var(--accent-red);
+}
+
+/*tables*/
+table {
+    margin: 12px 0 0 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid var(--hr-grey);
+    font-size: 16px;
+}
+table thead {
+    background-color: var(--hr-grey);
+}
+table caption {
+    font-size: 18px;
+    padding: 4px;
+    font-weight: 700;
+    text-align: left;
+}
+table th, td {
+    padding: 18px;
 }

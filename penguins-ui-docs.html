@@ -9,10 +9,20 @@
     <link rel="stylesheet" href="css/penguins-ui-docs.css">
 </head>
 <body class="p_ui">
-    <main class="p_ui-container">
+    <main class="p_ui-container" id="top">
         <h1 class="logo">Peng<span class="red-letter">UI</span>ns CSS</h1>
         <p class="desc">Міні CSS бібліотека команди Penguins</p>
-        <section>
+        <hr>
+        <nav>
+           <ul>
+               <li><a href="#about">Що це і для чого?</a></li>
+               <li><a href="#get_start">Як підключити?</a></li>
+               <li><a href="#using">Як використовувати?</a></li>
+               <li><a href="#components">Основні компоненти</a></li>
+           </ul> 
+        </nav>
+        <hr>
+        <section id="about">
             <h2>Що це і для чого?</h2>
             <p>Якщо потрібно швидко сворити простий HTML документ,
                 а на форматування та написання CSS немає часу - можна використати уже готові стилі форматування 
@@ -20,7 +30,7 @@
             </p>
         </section>
         <hr>
-        <section>
+        <section id="get_start">
             <h2>Як підключити?</h2>
             <p>Додати файл <a href="css/penguins-ui.css">penguins-ui.css</a>
                 до свого проекту та підключити його в HTML файлі з допомогою тегу <code>&lt;link&gt;</code>:
@@ -32,7 +42,7 @@
             </p>
         </section>
         <hr>
-        <section>
+        <section id="using">
             <h2>Як використовувати?</h2>
             <p>
                 Потрібно додати клас <code>.p_ui</code> до тегу <code>&lt;body&gt;</code>.
@@ -44,6 +54,10 @@
             </p>
             <p>
                 <img src="res/struct.jpg" alt="">
+            </p>
+            <p>За замовчуванням документ матиме одноколоночну структуру. 
+                Елемент з класом <code>p_ui-container </code>має властивості <code>display: flex</code>
+            та <code>flex-direction: column</code>
             </p>
             <h3>Приклад HTML розмітки</h3>
             <code class="code-block">
@@ -69,7 +83,7 @@
             </code>
         </section>
         <hr>
-        <section>
+        <section id="components">
             <h2>Основні компоненти</h2>
             <h3>Заголовки <code>&lt;h1&gt;-&lt;h5&gt;</code>:</h3>
             <h1>Заголовок 1</h1>
@@ -101,6 +115,65 @@
             </blockquote>
             <h3>Горизонтальна лінія <code>&lt;hr&gt;</code>:</h3>
             <hr>
+            <h3>Таблиці <code>&lt;table&gt;</code>:</h3>
+            <table>
+                <caption>Перелік автомобілів</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            №
+                        </th>
+                        <th>
+                            Марка
+                        </th>
+                        <th>
+                            Рік випуску
+                        </th>
+                        <th>
+                            Номер
+                        </th>
+                        <th>
+                            Дата реєстрації
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            BMW
+                        </td>
+                        <td>
+                            1997
+                        </td>
+                        <td>
+                            AE2789HO
+                        </td>
+                        <td>
+                            12.10.2000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            Honda
+                        </td>
+                        <td>
+                            2002
+                        </td>
+                        <td>
+                            BH8346KB
+                        </td>
+                        <td>
+                            02.05.2002
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             <h3>Блок коду <code>&lt;code&gt;</code>:</h3>
             <code class="code-block">
                 &lt;head&gt;
@@ -119,7 +192,7 @@
             <ul>
                 <li>клас<code>"code-block"</code> додає властивість <code>display: block</code></li>
                 <li>для виділення рядків використовується клас <code>"code-string"</code></li>
-                <li>для виділення CSS класів використовується клас <code>"code-class"</code></li>
+                <li>для виділення CSS селекторів використовується клас <code>"code-class"</code></li>
                 <li>для створення відступів використовується клас <code>"code-margin"</code></li>
                 <li>для виділення вмісту HTML тегу використовується клас <code>"code-tag-inner"</code></li>
             </ul>
@@ -150,6 +223,9 @@
         </section>
         <hr>
         <h4>Наступні розділи в розробці...</h4>
+        <p>
+            <a href="#top">До початку...</a>
+        </p>
     </main>
 </body>
 </html>
