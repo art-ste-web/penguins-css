@@ -15,6 +15,9 @@
     /*fonts*/
     --main-font: 'Inter', sans-serif;
     --code-font: 'Source Code Pro', monospace;
+
+    /*breakpoints*/
+    --mob: 360px;
 }
 
 /*global styles (if class p-ui added to body)*/
@@ -30,16 +33,35 @@ html {
 }
 /*LAYOUT*/
 /*container*/
- .p_ui-container {
-    display: flex;
-    flex-direction: column;
+ .p_ui .main-container {
     max-width: 1140px;
-    min-width: 600px;
+    min-width: 360px;
     margin: 0 auto;
     padding: 16px;
 }
-.p_ui img {
+/*FLEXBOX*/
+/*flex row*/
+.p_ui .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.p_ui .flex-col {
+    margin: 8px;
+    flex-grow: 1;
+}
+.p_ui .flex-col-50 {
+    margin: 8px;
+    flex-basis: 100%;
+    flex-grow: 2;
+}
+
+
+
+.p_ui img.img-block {
     display: block;
+    width: 80%;
     margin: 16px 0 0 0;
 }
 
@@ -272,4 +294,12 @@ table th, td {
 }
 .extra-padding {
     padding: 20px 0 0 30px;
+}
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+    .p_ui .flex-row {
+        flex-wrap: wrap;
+        
+    }
 }
