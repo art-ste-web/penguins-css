@@ -47,11 +47,12 @@
             <p>
                 Потрібно додати CSS клас <code>p_ui</code> до тегу <code>&lt;body&gt;</code>.
                 Після цього CSS стилі бібліотеки будуть автоматично застосовані до елементів сторінки.
+                <strong>Весь контент документу повинен знаходитись всередині блоку з класом <code>main-container</code></strong>
             </p>
-            <h3>Створення структури документу</h3>
+            <h3>Базова структура документу</h3>
             <p>
                 Для вирівнювання контенту по центру документу потрібно створити
-                блок-контейнер і додати йому CSS клас <code>p_ui-container</code>
+                блок-контейнер і додати йому CSS клас <code>main-container</code>
             </p>
             <p>
                 Схема базової структури документу:
@@ -60,14 +61,14 @@
                 <img class="img-block struct-img" src="res/struct.jpg" alt="">
             </p>
             <p>За замовчуванням документ матиме одноколоночну структуру. 
-                Елемент з класом <code>p_ui-container </code>має властивості <code>display: flex</code>
+                Елемент з класом <code>main-container </code>має властивості <code>display: flex</code>
             та <code>flex-direction: column</code>
             </p>
-            <h3>Приклад HTML розмітки</h3>
+            <h4>Приклад базової HTML розмітки</h4>
             <code class="code-block">
                 &lt;body class=<span class="code-string">"p_ui"</span>&gt;
                 <div class="code-margin">
-                    &lt;main class=<span class="code-string">"p_ui-container"</span>&gt;
+                    &lt;main class=<span class="code-string">"main-container"</span>&gt;
                     <br>
                     <div class="code-margin">
                         &lt;section&gt;
@@ -87,31 +88,72 @@
             </code>
         </section>
         <section>
+            <h3>Розмітка документу на основі рядків і колонок (flexbox)</h3>
+            <p>
+                Для забезпечення необхідної структури розташування блоків з контентом, а також забезпечення адаптивності
+                можна використовувати рядки та колонки, до 12 колонок у кожному рядку.
+            </p>
+            <h4>Створення структури блоку з колонками</h4>
+            <p>
+                Щоб додати контейнер для колонок необхідно створити блок з классом <code>f-row</code>
+            </p>
+            <p>
+                Для створення колонки необхідно додати блочний елемент з відповідним класом.
+                Бібліотека використовує принцип <em>mobile first</em>, тому імена класів мають наступну структуру:
+            </p>
+            <p>
+                <code><span class="code-string">f-col</span></code> - колонка буде займати весь доступний простір блоку з класом <code>f-row</code>
+            </p>
             <div class="sample-row-block f-row">
-                
-                <div class="f-col f-tab-col-2 f-dt-col-8">
-                    <div class="sample-col-block">
-                        <span class="text-highlight">.f-col</span><br>
-                        <span class="text-highlight-tab">.f-tab-col-2</span><br>
-                        <span class="text-highlight-dt">.f-dt-col-8</span>
-                    </div>
-                 </div>
+                <div class="row-title"><code>class=<span class="code-string">"f-row"</span></code></div>
                 <div class="f-col f-tab-col-2 f-dt-col-2">
                     <div class="sample-col-block">
-                        <span class="text-highlight">.f-col</span><br>
-                        <span class="text-highlight-tab">.f-tab-col-2</span><br>
-                        <span class="text-highlight-dt">.f-dt-col-2</span>
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col</span><br>
+                        <span class="text-highlight-tab">f-tab-col-2</span><br>
+                        <span class="text-highlight-dt">f-dt-col-2</span><br>
+                        <code>"</code>
+                    </div>
+                 </div>
+                <div class="f-col f-tab-col-2 f-dt-col-8">
+                    <div class="sample-col-block">
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col</span><br>
+                        <span class="text-highlight-tab">f-tab-col-2</span><br>
+                        <span class="text-highlight-dt">f-dt-col-8</span><br>
+                        <code>"</code>
                       </div>
                 </div>
                 <div class="f-col f-tab-col-8 f-dt-col-2">
                     <div class="sample-col-block">
-                        <span class="text-highlight">.f-col</span><br>
-                        <span class="text-highlight-tab">.f-tab-col-8</span><br>
-                        <span class="text-highlight-dt">.f-dt-col-2</span>
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col</span><br>
+                        <span class="text-highlight-tab">f-tab-col-8</span><br>
+                        <span class="text-highlight-dt">f-dt-col-2</span><br>
+                        <code>"</code>
                       </div>
                 </div>
-                <!-- <div class="sample-col-block flex-col">column 3</div> -->
+               
             </div>
+
+            <div class="sample-row-block f-row">
+                <div class="row-title"><code>class=<span class="code-string">"f-row"</span></code></div>
+                <div class="f-col-9 f-tab-col-6 f-dt-col-4">
+                    <div class="sample-col-block">
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col-9</span><br>
+                        <span class="text-highlight-tab">f-tab-col-6</span><br>
+                        <span class="text-highlight-dt">f-dt-col-4</span><br>
+                        <code>"</code>
+                    </div>
+                 </div>
+                <div class="f-col">
+                    <div class="sample-col-block">
+                        <code>class="</code><span class="text-highlight text-highlight-tab text-highlight-dt">f-col</span><code>"</code>
+                      </div>
+                </div>
+            </div>
+
         </section>
         <hr>
         <section id="components">
