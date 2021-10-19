@@ -1,9 +1,29 @@
+//columns gap
+$col-gap: calc(8px);
+
+/*column width in %*/
+$col1: calc(100%/12);
+$col2: calc((100%/12)*2);
+$col3: calc((100%/12)*3);
+$col4: calc((100%/12)*4);
+$col5: calc((100%/12)*5);
+$col6: calc((100%/12)*6);
+$col7: calc((100%/12)*7);
+$col8: calc((100%/12)*8);
+$col9: calc((100%/12)*9);
+$col10: calc((100%/12)*10);
+$col11: calc((100%/12)*11);
+
+
+
 @mixin col-prop {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin: 8px;
+    padding: $col-gap;
 
 }
+
 
 /*flex row*/
 .p-ui {
@@ -11,7 +31,7 @@
     .f-row {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
     }
     .f-reverse-row {
@@ -27,62 +47,62 @@
         @include col-prop();
     }
     .f-col-1 {
-        flex: 1 0 auto;
-        max-width: calc(100%/12);
+        flex: 1 0 $col1;
+        max-width: $col1;
         @include col-prop();
     }
     .f-col-2 {
-        flex: 2 0 auto;
-        max-width: calc((100%/12)*2);
+        flex: 2 0 $col2;
+        max-width: $col2;
         @include col-prop();
     }
     .f-col-3 {
-        flex: 3 0 auto;
-        max-width: calc((100%/12)*3);
+        flex: 3 0 $col3;
+        max-width: $col3;
         @include col-prop();
     }
     .f-col-4 {
-        flex: 4 0 auto;
-        max-width: calc((100%/12)*4);
+        flex: 4 0 $col4;
+        max-width: $col4;
         @include col-prop();
     }
     .f-col-5 {
-        flex: 5 0 auto;
-        max-width: calc((100%/12)*5);
+        flex: 5 0 $col5;
+        max-width: $col5;
         @include col-prop();
     }
     .f-col-6 {
-        flex: 6 0 auto;
-        max-width: calc((100%/12)*6);
+        flex: 6 0 $col6;
+        max-width: $col6;
         @include col-prop();
     }
     .f-col-7 {
-        flex: 7 0 auto;
-        max-width: calc((100%/12)*7);
+        flex: 7 0 $col7;
+        max-width: $col7;
         @include col-prop();
     }
     .f-col-8 {
-        flex: 8 0 auto;
-        max-width: calc((100%/12)*8);
+        flex: 8 0 $col8;
+        max-width: $col8;
         @include col-prop();
     }
     .f-col-9 {
-        flex: 9 0 auto;
-        max-width: calc((100%/12)*9);
+        flex: 9 0 $col9;
+        max-width: $col9;
         @include col-prop();
     }
     .f-col-10 {
-        flex: 10 0 auto;
-        max-width: calc((100%/12)*10);
+        flex: 10 0 $col10;
+        max-width: $col10;
         @include col-prop();
     }
     .f-col-11 {
-        flex: 11 0 auto;
-        max-width: calc((100%/12)*11);
+        flex: 11 0 $col11;
+        max-width: $col11;
         @include col-prop();
     }
     .f-col-12 {
-        flex: 12 0 auto;
+        flex: 12 0 100%;
         max-width: 100%;
         @include col-prop();
     }
@@ -92,51 +112,51 @@
 @media screen and (min-width: $tab) {
     .p-ui {
         .f-tab-col-1 {
-            flex: 2 0 auto;
-            max-width: calc(100%/12);
+            flex: 1 0 $col1;
+            max-width: $col1;
         }
         .f-tab-col-2 {
-            flex: 2 0 auto;
-            max-width: calc((100%/12)*2);
+            flex: 2 0 $col2;
+            max-width: $col2;
         }
         .f-tab-col-3 {
-            flex: 3 0 auto;
-            max-width: calc((100%/12)*3);
+            flex: 3 0 $col3;
+            max-width: $col3;
         }
         .f-tab-col-4 {
-            flex: 4 0 auto;
-            max-width: calc((100%/12)*4);
+            flex: 4 0 $col4;
+            max-width: $col4;
         }
-        .p-ui .f-tab-col-5 {
-            flex: 5 0 auto;
-            max-width: calc((100%/12)*5);
+        .f-tab-col-5 {
+            flex: 5 0 $col5;
+            max-width: $col5;
         }
         .f-tab-col-6 {
-            flex: 6 0 auto;
-            max-width: calc((100%/12)*6);
+            flex: 6 0 $col6;
+            max-width: $col6;
         }
-        .p-ui .f-tab-col-7 {
-            flex: 7 0 auto;
-            max-width: calc((100%/12)*7);
+        .f-tab-col-7 {
+            flex: 7 0 $col7;
+            max-width: $col7;
         }
         .f-tab-col-8 {
-            flex: 8 0 auto;
-            max-width: calc((100%/12)*8);
+            flex: 8 0 $col8;
+            max-width: $col8;
         }
         .f-tab-col-9 {
-            flex: 9 0 auto;
-            max-width: calc((100%/12)*9);
+            flex: 9 0 $col9;
+            max-width: $col9;
         }
         .f-tab-col-10 {
-            flex: 10 0 auto;
-            max-width: calc((100%/12)*10);
+            flex: 10 0 $col10;
+            max-width: $col10;
         }
         .f-tab-col-11 {
-            flex: 11 0 auto;
-            max-width: calc((100%/12)*11);
+            flex: 11 0 $col11;
+            max-width: $col11;
         }
         .f-tab-col-12 {
-            flex: 12 0 auto;
+            flex: 12 0 100%;
             max-width: 100%;
         }
     }
@@ -145,51 +165,51 @@
 @media (min-width: $desktop) {
     .p-ui {
         .f-dt-col-1 {
-            flex: 1 0 auto;
-            max-width: calc(100%/12);
+            flex: 1 0 $col1;
+            max-width: $col1;
         }
         .f-dt-col-2 {
-            flex: 2 0 auto;
-            max-width: calc((100%/12)*2);
+            flex: 2 0 $col2;
+            max-width: $col2;
         }
         .f-dt-col-3 {
-            flex: 3 0 auto;
-            max-width: calc((100%/12)*3);
+            flex: 3 0 $col3;
+            max-width: $col3;
         }
         .f-dt-col-4 {
-            flex: 4 0 auto;
-            max-width: calc((100%/12)*4);
+            flex: 4 0 $col4;
+            max-width: $col4;
         }
         .f-dt-col-5 {
-            flex: 5 0 auto;
-            max-width: calc((100%/12)*5);
+            flex: 5 0 $col5;
+            max-width: $col5;
         }
         .f-dt-col-6 {
-            flex: 6 0 auto;
-            max-width: calc((100%/12)*6);
+            flex: 6 0 $col6;
+            max-width: $col6;
         }
         .f-dt-col-7 {
-            flex: 7 0 auto;
-            max-width: calc((100%/12)*7);
+            flex: 7 0 $col7;
+            max-width: $col7;
         }
         .f-dt-col-8 {
-            flex: 8 0 auto;
-            max-width: calc((100%/12)*8);
+            flex: 8 0 $col8;
+            max-width: $col8;
         }
         .f-dt-col-9 {
-            flex: 9 0 auto;
-            max-width: calc((100%/12)*9);
+            flex: 9 0 $col9;
+            max-width: $col9;
         }
         .f-dt-col-10 {
-            flex: 10 0 auto;
-            max-width: calc((100%/12)*10);
+            flex: 10 0 $col10;
+            max-width: $col10;
         }
-        .p-ui .f-dt-col-11 {
-            flex: 11 0 auto;
-            max-width: calc((100%/12)*11);
+        .f-dt-col-11 {
+            flex: 11 0 $col11;
+            max-width: $col11;
         }
-        .p-ui .f-dt-col-12 {
-            flex: 11 0 auto;
+        .f-dt-col-12 {
+            flex: 12 0 100%;
             max-width: 100%;
         }
     }

@@ -17,17 +17,21 @@
         <h1 class="logo">Peng<span class="red-letter">UI</span>ns CSS</h1>
         <p class="desc">Міні CSS бібліотека команди Penguins</p>
         <hr>
-        <!--navigation-->
-        <nav>
-           <ul>
-               <li><a href="#about">Що це і для чого?</a></li>
-               <li><a href="#get_start">Як підключити?</a></li>
-               <li><a href="#using">Як використовувати?</a></li>
-               <li><a href="#components">Основні компоненти</a></li>
-           </ul> 
-        </nav>
-        <hr>
-        <!--about-->
+        <div class="f-row">
+            <aside class="f-col-12 f-tab-col-12 f-dt-col-3">
+                <!--navigation-->
+                <nav>
+                    <ul>
+                        <li><a href="#about">Що це і для чого?</a></li>
+                        <li><a href="#get_start">Як підключити?</a></li>
+                        <li><a href="#using">Як використовувати?</a></li>
+                        <li><a href="#components">Основні компоненти</a></li>
+                    </ul> 
+                 </nav>
+                 <hr>
+            </aside>
+            <article class="f-col-12 f-tab-col-12 f-dt-col-9">
+                <!--about-->
         <section id="about">
             <h2>Що це і для чого?</h2>
             <p>Якщо потрібно швидко створити простий HTML документ,
@@ -137,6 +141,38 @@
                 Нижче наведені приклади сіток побудованих з допомогою описаних класів 
                 (ширина колонок змінюється динамічно при зміні ширини вікна браузера):
             </p>
+
+            <div class="sample-row-block f-row">
+                <div class="row-title"><code>class=<span class="code-string">"f-row"</span></code></div>
+                <div class="f-col-12 f-dt-col-4">
+                    <div class="sample-col-block">
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col-12</span><br>
+                        <span class="text-highlight-tab">f-tab-12</span><br>
+                        <span class="text-highlight-dt">f-dt-col-4</span><br>
+                        <code>"</code>
+                    </div>
+                 </div>
+                <div class="f-col-12 f-dt-col-8">
+                    <div class="sample-col-block">
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col-12</span><br>
+                        <span class="text-highlight-tab">f-tab-12</span><br>
+                        <span class="text-highlight-dt">f-dt-col-8</span><br>
+                        <code>"</code>
+                    </div>
+                </div>
+            </div>
+<!--layout sample code-->
+<h4>HTML розмітка:</h4>
+<code class="code-block">
+<pre>
+&lt;div class=<span class="code-string">"f-row"</span>&gt;
+    &lt;div class=<span class="code-string">"f-col-12 f-tab-col-12 f-dt-col-4"</span>&gt;&lt;/div&gt;
+    &lt;div class=<span class="code-string">"f-col-12 f-tab-col-12 f-dt-col-8"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</code>
             <div class="sample-row-block f-row">
                 <div class="row-title"><code>class=<span class="code-string">"f-row"</span></code></div>
                 <div class="f-col f-tab-col-2 f-dt-col-2">
@@ -385,6 +421,11 @@
             </ul>
             <hr>
         </article>
+            </article>
+        </div>
+        
+        
+        
     </main>
     <section class="section-container"> 
         <h4>CSS позиціонування. Різниця між <code>relative</code> та <code>absolute</code></h4>
