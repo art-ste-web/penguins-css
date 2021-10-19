@@ -384,10 +384,10 @@ html {
 }
 
 /*flex row*/
-.p-ui {
+/* .p-ui { */
   /*flex column*/
   /*mobile columns: from 768px to min-width*/
-}
+/* } */
 
 .p-ui .f-row {
   display: -webkit-box;
@@ -759,14 +759,14 @@ html {
   }
 }
 
-.p-ui {
+/* .p-ui { */
   /*headers*/
   /*paragraph*/
   /*ul*/
   /*link*/
   /*blockqoute*/
   /*code*/
-}
+/* } */
 
 .p-ui h1 {
   font-size: 2.2rem;
@@ -885,10 +885,10 @@ html {
   margin: 12px 0 0 0;
 }
 
-.p-ui {
-  /*img*/
-  /*hr*/
-}
+/* .p-ui {
+  img
+  hr
+} */
 
 .p-ui .img-block {
   display: block;
