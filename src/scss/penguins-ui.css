@@ -374,6 +374,7 @@ html {
 .p-ui {
   font-family: "Inter", sans-serif;
   color: #1E1E1E;
+  padding-bottom: 32px;
 }
 
 .p-ui .main-container {
@@ -841,6 +842,7 @@ html {
 }
 
 .p-ui ul li {
+  line-height: 1.2rem;
   margin-top: 8px;
 }
 
@@ -856,9 +858,10 @@ html {
 .p-ui a {
   text-decoration: none;
   color: #6D6D6D;
-  border-bottom: 3px dashed #E63946;
+  border-bottom: 2px dashed #E63946;
   -webkit-transition: all .2s;
   transition: all .2s;
+  line-height: 1.2rem;
 }
 
 .p-ui a:hover {

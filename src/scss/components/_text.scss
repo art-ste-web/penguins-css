@@ -44,6 +44,7 @@
         margin: 12px 0 0 0;
 
         li {
+            line-height: 1.2rem;
             margin-top: 8px;
             &::before {
                 content: "\2022";
@@ -60,8 +61,9 @@
     a {
         text-decoration: none;
         color: $medium-grey;
-        border-bottom: 3px dashed $accent-red;
+        border-bottom: 2px dashed $accent-red;
         transition: all .2s;
+        line-height: 1.2rem;
 
         &:hover {
             color: $text-black;
