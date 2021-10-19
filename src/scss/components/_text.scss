@@ -1,0 +1,116 @@
+
+.p-ui {
+    /*headers*/
+    h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 32px 0 0 0;
+    }
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 24px 0 0 0;
+    }
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $medium-grey;
+        margin: 24px 0 0 0;
+    }
+    h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $medium-grey;
+        margin: 20px 0 0 0;
+    }
+    h5 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $medium-grey;
+        margin: 20px 0 0 0;
+    }
+
+    /*paragraph*/
+    p {
+        font-size: 1rem;
+        line-height: 28px;
+        margin: 8px 0 0 0;
+    }
+
+    /*ul*/
+    ul {
+        list-style-type: none;
+        font-size: 1rem;
+        margin: 12px 0 0 0;
+
+        li {
+            margin-top: 8px;
+            &::before {
+                content: "\2022";
+                color: $accent-red;
+                font-weight: bold;
+                display: inline-block;
+                width: 18px;
+                margin-left: -18px;
+            }
+        }
+    }
+
+    /*link*/
+    a {
+        text-decoration: none;
+        color: $medium-grey;
+        border-bottom: 3px dashed $accent-red;
+        transition: all .2s;
+
+        &:hover {
+            color: $text-black;
+            border-bottom: 3px solid $accent-red;
+            transition: all .2s;
+        }
+    }
+
+    /*blockqoute*/
+    blockquote {
+        font-size: 1.1rem;
+        margin: 16px 16px 0 48px;
+        padding: 32px 8px 32px 16px;
+        font-family: $main-font;
+        font-weight: 700;
+        line-height: 1.1rem;
+        color: $text-black;
+        border-left: 10px solid $accent-red;
+    }
+
+    /*code*/
+    pre {
+        font-family: $code-font;
+    }
+    code {
+        font-family: $code-font;
+        font-size: 1rem;
+        color: $code-blue;
+
+        .code-string {
+            color: $accent-red;
+        }
+        .code-tag-inner {
+            color: $light-grey;
+        }
+        .code-class {
+            color: #038088;
+        }
+        .code-margin {
+            margin: 0 0 0 32px;
+        }
+    }
+    .code-block {
+        display: block;
+        margin: 12px 0 0 0;
+        // overflow-x: scroll;
+    }
+    
+}
+
+
+
