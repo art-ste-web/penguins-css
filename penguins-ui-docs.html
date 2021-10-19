@@ -386,7 +386,7 @@
             <hr>
         </article>
     </main>
-    <section class="section-container">
+    <section class="section-container"> 
         <h4>CSS позиціонування. Різниця між <code>relative</code> та <code>absolute</code></h4>
         <div class="position-container">
             <div class="position-block">Я звичайний блок з <code>position: static</code> як і у всіх блоків за
@@ -404,6 +404,60 @@
             на оточуючі блоки, та зміщуюся відносно своєї позиції на відстані, вказані за допомогою властивостей
             <code>left, right, top, bottom</code>.
             </div>
+        </div>
+        <hr>
+    </section>
+    <section class="section-container">
+        <h4>Шрифти</h4>
+        <div>
+            <p>Для додавання шрифтів використовуються класи з назвами формату: 
+                <ul>
+                    <li><code>.font-*</code> - regular;</li>
+                    <li><code>.font-*-it</code> - italic;</li>
+                    <li><code>.font-*-b</code> - bold;</li>
+                </ul>                
+            </p>
+            <p>Шрифти знаходяться у розділі base/_typography.scss</p>
+            <table>
+                <caption>Шрифти у бібліотеці</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            №
+                        </th>
+                        <th>
+                            Клас для форматування
+                        </th>
+                        <th>
+                            Приклад форматування
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td  class='code-class'>
+                            <div class='font-Roboto'>Lobster</div>
+                        </td>
+                        <td class='font-Lobster'>
+                            The quick brown fox jumps over the lazy dog.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            Bebas
+                        </td>
+                        <td class='font-Festive'>
+                            The quick brown fox jumps over the lazy dog.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </body>
