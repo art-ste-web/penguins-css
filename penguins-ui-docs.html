@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Документація PengUIns CSS</title>
-    <link rel="stylesheet" href="css/penguins-ui.css">
+    <link rel="stylesheet" href="src/scss/penguins-ui.css">
+    <!-- <link rel="stylesheet" href="css/penguins-ui.css"> -->
     <link rel="stylesheet" href="css/penguins-ui-docs.css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
-<body class="p_ui">
-    <main class="p_ui-container" id="top">
+<body class="p-ui">
+    <main class="main-container" id="top">
         <h1 class="logo">Peng<span class="red-letter">UI</span>ns CSS</h1>
         <p class="desc">Міні CSS бібліотека команди Penguins</p>
         <hr>
+        <!--navigation-->
         <nav>
            <ul>
                <li><a href="#about">Що це і для чого?</a></li>
@@ -22,6 +27,7 @@
            </ul> 
         </nav>
         <hr>
+        <!--about-->
         <section id="about">
             <h2>Що це і для чого?</h2>
             <p>Якщо потрібно швидко створити простий HTML документ,
@@ -30,6 +36,7 @@
             </p>
         </section>
         <hr>
+        <!--get started-->
         <section id="get_start">
             <h2>Як підключити?</h2>
             <p>Додати файл <a href="css/penguins-ui.css">penguins-ui.css</a>
@@ -40,34 +47,39 @@
                     &lt;link rel=<span class="code-string">"stylesheet"</span> href=<span class="code-string">"penguins-ui.css"</span>&gt;
                 </code>
             </p>
+            <p>
+                <a href="css/penguins-ui.css"  download>Скачати penguins-ui.css</a>
+            </p>
         </section>
         <hr>
+        <!--how to use-->
         <section id="using">
             <h2>Як використовувати?</h2>
             <p>
-                Потрібно додати CSS клас <code>p_ui</code> до тегу <code>&lt;body&gt;</code>.
+                Потрібно додати CSS клас <code><span class="code-string">p-ui</span></code> до тегу <code>&lt;body&gt;</code>.
                 Після цього CSS стилі бібліотеки будуть автоматично застосовані до елементів сторінки.
+                <strong>Весь контент документу повинен знаходитись всередині блоку з класом <code>main-container</code></strong>
             </p>
-            <h3>Створення структури документу</h3>
+            <h3>Базова структура документу</h3>
             <p>
                 Для вирівнювання контенту по центру документу потрібно створити
-                блок-контейнер і додати йому CSS клас <code>p_ui-container</code>
+                блок-контейнер і додати йому CSS клас <code>main-container</code>
             </p>
             <p>
                 Схема базової структури документу:
             </p>
             <p>
-                <img src="res/struct.jpg" alt="">
+                <img class="img-block struct-img" src="res/struct.jpg" alt="">
             </p>
             <p>За замовчуванням документ матиме одноколоночну структуру. 
-                Елемент з класом <code>p_ui-container </code>має властивості <code>display: flex</code>
+                Елемент з класом <code>main-container </code>має властивості <code>display: flex</code>
             та <code>flex-direction: column</code>
             </p>
-            <h3>Приклад HTML розмітки</h3>
+            <h4>Приклад базової HTML розмітки</h4>
             <code class="code-block">
-                &lt;body class=<span class="code-string">"p_ui"</span>&gt;
+                &lt;body class=<span class="code-string">"p-ui"</span>&gt;
                 <div class="code-margin">
-                    &lt;main class=<span class="code-string">"p_ui-container"</span>&gt;
+                    &lt;main class=<span class="code-string">"main-container"</span>&gt;
                     <br>
                     <div class="code-margin">
                         &lt;section&gt;
@@ -86,7 +98,121 @@
                     &lt;/body&gt;
             </code>
         </section>
+        <!--layout-->
+        <section>
+            <h3>Розмітка документу на основі рядків і колонок (flexbox)</h3>
+            <p>
+                Для забезпечення необхідної структури розташування блоків з контентом, а також забезпечення адаптивності
+                можна використовувати рядки та колонки, до 12 колонок у кожному рядку.
+            </p>
+            <h4>Створення структури блоку з колонками</h4>
+            <p>
+                Щоб додати контейнер для колонок необхідно створити блок з классом <code>f-row</code>
+            </p>
+            <p>
+                Для створення колонки необхідно додати блочний елемент з відповідним класом.
+                Бібліотека використовує принцип <em>mobile first</em>, тому імена класів мають наступну структуру:
+            </p>
+            <p>
+                <code><span class="code-string">f-col</span></code> - ширина блоку буде займати весь доступний простір
+                 блоку з класом <code>f-row</code>, якщо блоків з класом <code><span class="code-string">f-col</span></code>
+                 буде декілька, вони поділять
+                доступний простір між собою на рівні частини.
+            </p>
+            <p>
+                <code><span class="code-string">f-col-4</span></code> - для зміни співвідношення ширини блоків 
+                до імені класу додається цифра, яка показує скільки з 12 доступних колонок буде займати блок.
+            </p>
+            <h4>Зміна ширини колонок в залежності від розміру екрану</h4>
+            <p>
+                Для зміни ширини блоків в залежності від розміру екрану в імені класу використовуються префікси
+                 <code>-tab-</code> (tablet) для планшетів (ширина екрану більше 768px), та <code>-dt-</code> (desktop) 
+                 для компьютерів (ширина екрану більше 1024px), таким чином імена класів будуть мати наступний вигляд:<br> 
+                 <code><span class="code-string">f-tab-col-8</span></code> - для планшетів,<br>  
+                 <code><span class="code-string">f-dt-col-4</span></code> - для настольних ПК.<br> 
+                 Блок який має дані класи буде займати 8 колонок з 12 на планшеті та 4 колонки з 12 на компьютері.
+            </p>
+            <!--layout examples-->
+            <p>
+                Нижче наведені приклади сіток побудованих з допомогою описаних класів 
+                (ширина колонок змінюється динамічно при зміні ширини вікна браузера):
+            </p>
+            <div class="sample-row-block f-row">
+                <div class="row-title"><code>class=<span class="code-string">"f-row"</span></code></div>
+                <div class="f-col f-tab-col-2 f-dt-col-2">
+                    <div class="sample-col-block">
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col</span><br>
+                        <span class="text-highlight-tab">f-tab-col-2</span><br>
+                        <span class="text-highlight-dt">f-dt-col-2</span><br>
+                        <code>"</code>
+                    </div>
+                 </div>
+                <div class="f-col f-tab-col-2 f-dt-col-8">
+                    <div class="sample-col-block">
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col</span><br>
+                        <span class="text-highlight-tab">f-tab-col-2</span><br>
+                        <span class="text-highlight-dt">f-dt-col-8</span><br>
+                        <code>"</code>
+                      </div>
+                </div>
+                <div class="f-col f-tab-col-8 f-dt-col-2">
+                    <div class="sample-col-block">
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col</span><br>
+                        <span class="text-highlight-tab">f-tab-col-8</span><br>
+                        <span class="text-highlight-dt">f-dt-col-2</span><br>
+                        <code>"</code>
+                      </div>
+                </div>
+            </div>
+            <h4>HTML розмітка:</h4>
+<!--layout sample code-->
+            <code class="code-block">
+<pre>
+&lt;div class=<span class="code-string">"f-row"</span>&gt;
+    &lt;div class=<span class="code-string">"f-col f-tab-col-2 f-dt-col-2"</span>&gt;&lt;/div&gt;
+    &lt;div class=<span class="code-string">"f-col f-tab-col-2 f-dt-col-8"</span>&gt;&lt;/div&gt;
+    &lt;div class=<span class="code-string">"f-col f-tab-col-8 f-dt-col-2"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </code>
+        
+            <div class="sample-row-block f-row">
+                <div class="row-title"><code>class=<span class="code-string">"f-row"</span></code></div>
+                <div class="f-col-9 f-tab-col-6 f-dt-col-4">
+                    <div class="sample-col-block">
+                        <code>class="</code><br>
+                        <span class="text-highlight">f-col-9</span><br>
+                        <span class="text-highlight-tab">f-tab-col-6</span><br>
+                        <span class="text-highlight-dt">f-dt-col-4</span><br>
+                        <code>"</code>
+                    </div>
+                 </div>
+                <div class="f-col">
+                    <div class="sample-col-block">
+                        <code>class="</code><span class="text-highlight text-highlight-tab text-highlight-dt">f-col</span><code>"</code>
+                      </div>
+                </div>
+            </div>
+            <h4>HTML розмітка:</h4>
+<!--layout sample code-->
+            <code class="code-block">
+<pre>
+&lt;div class=<span class="code-string">"f-row"</span>&gt;
+    &lt;div class=<span class="code-string">"f-col-9 f-tab-col-6 f-dt-col-4"</span>&gt;&lt;/div&gt;
+    &lt;div class=<span class="code-string">"f-col"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </code>
+            <p>
+                Щоб змінити порядок розташування колонок на зворотній необхідно до блоку з класом
+                <code>f-row</code> додати клас <code>f-reverse-row</code>
+            </p>
+        </section>
         <hr>
+        <!--components-->
         <section id="components">
             <h2>Основні компоненти</h2>
             <h3>Заголовки <code>&lt;h1&gt;-&lt;h5&gt;</code>:</h3>
@@ -121,23 +247,23 @@
             <hr>
             <h3>Таблиці <code>&lt;table&gt;</code>:</h3>
             <table>
-                <caption>Перелік автомобілів</caption>
+                <caption>Українські письменники</caption>
                 <thead>
                     <tr>
                         <th>
                             №
                         </th>
                         <th>
-                            Марка
+                            Прізвище
                         </th>
                         <th>
-                            Рік випуску
+                            Рік народження
                         </th>
                         <th>
-                            Номер
+                            Твір
                         </th>
                         <th>
-                            Дата реєстрації
+                            Рік першої публікації
                         </th>
                     </tr>
                 </thead>
@@ -147,16 +273,16 @@
                             1
                         </td>
                         <td>
-                            BMW
+                            Шевченко Т.Г.
                         </td>
                         <td>
-                            1997
+                            1814
                         </td>
                         <td>
-                            AE2789HO
+                            "Заповіт"
                         </td>
                         <td>
-                            12.10.2000
+                            1859
                         </td>
                     </tr>
                     <tr>
@@ -164,16 +290,16 @@
                             2
                         </td>
                         <td>
-                            Honda
+                            Франко І.Я.
                         </td>
                         <td>
-                            2002
+                            1856
                         </td>
                         <td>
-                            BH8346KB
+                            "Захар Беркут"
                         </td>
                         <td>
-                            02.05.2002
+                            1883
                         </td>
                     </tr>
                 </tbody>
@@ -201,17 +327,19 @@
                 <li>для виділення вмісту HTML тегу використовується клас <code>"code-tag-inner"</code></li>
             </ul>
             <p>Приклад HTML розмітки коду:</p>
+<!--code sample block-->
             <code class="code-block">
-                &lt;code class="code-block"&gt;<br>
-                &lt;span class="code-class"&gt;.p_ui blockquote&lt;/span&gt; {&lt;br&gt; <br>
-                    &lt;div class="code-margin"&gt;font-size:  &lt;span class="code-string"&gt;18px&lt;/span&gt;;&lt;br&gt; <br>
-                    margin: &lt;span class="code-string"&gt;32px 16px 32px 48px&lt;/span&gt;;&lt;br&gt; <br>
-                    padding: &lt;span class="code-string"&gt;32px 8px 32px 16px&lt;/span&gt;;&lt;br&gt; <br>
-                    font-family: &lt;span class="code-string"&gt;'Inter', sans-serif&lt;/span&gt;;&lt;br&gt; <br>
-                    font-weight: &lt;span class="code-string"&gt;700&lt;/span&gt;;&lt;br&gt; <br>
-                    &lt;/div&gt;&lt;br&gt; <br>
-                }&lt;br&gt; <br>
-                &lt;/code&gt;
+<pre>
+&lt;pre&gt;
+    &lt;span class="code-class"&gt;.p_ui blockquote&lt;/span&gt; {
+        font-size:  &lt;span class="code-string"&gt;18px&lt;/span&gt;;
+        margin: &lt;span class="code-string"&gt;32px 16px 32px 48px&lt;/span&gt;;
+        padding: &lt;span class="code-string"&gt;32px 8px 32px 16px&lt;/span&gt;;
+        font-family: &lt;span class="code-string"&gt;'Inter', sans-serif&lt;/span&gt;;
+        font-weight: &lt;span class="code-string"&gt;700&lt;/span&gt;;
+    }
+&lt;/pre&gt;
+</pre>
             </code>
             <p>Результат:</p>
             <code class="code-block">

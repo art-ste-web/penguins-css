@@ -1,0 +1,25 @@
+.p-ui {
+    table {
+        margin: 12px 0 0 0;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border: 1px solid $hr-grey;
+        font-size: .9rem;
+
+        thead {
+            background-color: $hr-grey;
+        }
+
+        caption {
+            font-size: 18px;
+            padding: 4px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 18px;
+        }
+    }
+}
+
