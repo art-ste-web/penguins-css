@@ -1,6 +1,6 @@
 
 .p-ui {
-    /*headers*/
+    //headers
     h1 {
         font-size: 2.2rem;
         font-weight: 700;
@@ -14,7 +14,7 @@
     h3 {
         font-size: 1.4rem;
         font-weight: 700;
-        color: $medium-grey;
+        // color: $medium-grey;
         margin: 24px 0 0 0;
     }
     h4 {
@@ -30,14 +30,14 @@
         margin: 20px 0 0 0;
     }
 
-    /*paragraph*/
+    //paragraph
     p {
         font-size: 1rem;
         line-height: 28px;
         margin: 8px 0 0 0;
     }
 
-    /*ul*/
+    //ul
     ul {
         list-style-type: none;
         font-size: 1rem;
@@ -57,7 +57,7 @@
         }
     }
 
-    /*link*/
+    //link
     a {
         text-decoration: none;
         color: $medium-grey;
@@ -72,7 +72,7 @@
         }
     }
 
-    /*blockqoute*/
+    //blockqoute
     blockquote {
         font-size: 1.1rem;
         margin: 16px 16px 0 48px;
@@ -84,7 +84,7 @@
         border-left: 10px solid $accent-red;
     }
 
-    /*code*/
+    //code
     pre {
         font-family: $code-font;
     }

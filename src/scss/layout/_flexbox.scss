@@ -1,7 +1,7 @@
 //columns gap
 $col-gap: calc(8px);
 
-/*column width in %*/
+//column width in %
 $col1: calc(100%/12);
 $col2: calc((100%/12)*2);
 $col3: calc((100%/12)*3);
@@ -25,7 +25,7 @@ $col11: calc((100%/12)*11);
 }
 
 
-/*flex row*/
+//flex row
 .p-ui {
     
     .f-row {
@@ -38,8 +38,8 @@ $col11: calc((100%/12)*11);
         flex-direction: row-reverse;
     }
 
-    /*flex column*/
-    /*mobile columns: from 768px to min-width*/
+    //flex column
+    //mobile columns: from 768px to min-width
     .f-col {
         /* flex-basis: 100%; */
         flex: 1 1 0%;
@@ -108,8 +108,8 @@ $col11: calc((100%/12)*11);
     }
 }
  
-/*tablet columns*/
-@media screen and (min-width: $tab) {
+//tablet columns
+@media screen and (min-width: $tablet) {
     .p-ui {
         .f-tab-col-1 {
             flex: 1 0 $col1;
@@ -161,7 +161,7 @@ $col11: calc((100%/12)*11);
         }
     }
 }
-/*desktop columns*/
+//desktop columns
 @media (min-width: $desktop) {
     .p-ui {
         .f-dt-col-1 {

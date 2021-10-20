@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/penguins-ui-docs.css">
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body class="p-ui">
@@ -24,12 +25,10 @@
                     <ul>
                         <li><a href="#about">Що це і для чого?</a></li>
                         <li><a href="#get_start">Як підключити?</a></li>
-                        <li><a href="#using">Як використовувати?</a>
-                            <ul>
-                                <li><a href="#base-str">Базова структура</a></li>
-                                <li><a href="#row-col">Рядки та колонки (flexbox)</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#using">Як використовувати?</a></li>
+                        <li><a href="#base-str">Базова структура</a></li>
+                        <li><a href="#row-col">Cтруктура на Flexbox</a></li>
+                        <li><a href="#grid">Структура на Grid</a></li>
                         <li><a href="#components">Основні компоненти</a></li>
                         <li><a href="#fonts">Шрифти</a></li>
                     </ul> 
@@ -109,15 +108,18 @@
             </code>
         </section>
         <!--layout-->
-        <section>
-            <h3 id="row-col">Розмітка документу на основі рядків і колонок (flexbox)</h3>
+        <!--flexbox layout-->
+        <section id="row-col">
+            <h3>Розмітка документу на основі рядків і колонок (CSS Flexbox)</h3>
             <p>
                 Для забезпечення необхідної структури розташування блоків з контентом, а також забезпечення адаптивності
-                можна використовувати рядки та колонки, до 12 колонок у кожному рядку.
+                використовуються рядки та колонки створені на основі технології 
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexbox</a>
+                Кожний рядок вміщує до 12 колонок, шириною яких можна керувати з допомогою CSS класів. 
             </p>
             <h4>Створення структури блоку з колонками</h4>
             <p>
-                Щоб додати контейнер для колонок необхідно створити блок з классом <code>f-row</code>
+                Щоб додати контейнер для колонок необхідно створити блок з классом <code><span class="code-string">f-row</span></code>
             </p>
             <p>
                 Для створення колонки необхідно додати блочний елемент з відповідним класом.
@@ -142,10 +144,10 @@
                  <code><span class="code-string">f-dt-col-4</span></code> - для настольних ПК.<br> 
                  Блок який має дані класи буде займати 8 колонок з 12 на планшеті та 4 колонки з 12 на компьютері.
             </p>
-            <!--layout examples-->
+            <!--flexbox layout examples-->
             <p>
                 Нижче наведені приклади сіток побудованих з допомогою описаних класів 
-                (ширина колонок змінюється динамічно при зміні ширини вікна браузера):
+                <em>(ширина колонок змінюється динамічно при зміні ширини вікна браузера)</em>:
             </p>
 
             <div class="sample-row-block f-row">
@@ -169,7 +171,7 @@
                     </div>
                 </div>
             </div>
-<!--layout sample code-->
+<!--flexbox layout sample code-->
 <h4>HTML розмітка:</h4>
 <code class="code-block">
 <pre>
@@ -210,7 +212,7 @@
                 </div>
             </div>
             <h4>HTML розмітка:</h4>
-<!--layout sample code-->
+<!--flexbox layout sample code-->
             <code class="code-block">
 <pre>
 &lt;div class=<span class="code-string">"f-row"</span>&gt;
@@ -239,7 +241,7 @@
                 </div>
             </div>
             <h4>HTML розмітка:</h4>
-<!--layout sample code-->
+<!--flexbox layout sample code-->
             <code class="code-block">
 <pre>
 &lt;div class=<span class="code-string">"f-row"</span>&gt;
@@ -252,6 +254,109 @@
                 Щоб змінити порядок розташування колонок на зворотній необхідно до блоку з класом
                 <code>f-row</code> додати клас <code>f-reverse-row</code>
             </p>
+        </section>
+        <hr>
+        <!--grid layout-->
+        <section id="grid">
+            <h3>Розмітка документу на основі сітки (CSS Grid)</h3>
+            <p>
+                Альтернативним способом забезпечення необхідної структури розташування блоків з контентом,
+                а також забезпечення адаптивності є використання розмітки на основі технології
+                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a>.
+            </p>
+            <h4>Створення grid-структури</h4>
+            <p>
+                Щоб додати блок-контейнер для елементів сітки необхідно створити блок з классом
+                 <code><span class="code-string">g-container</span></code>. Ширина блоку-контейнера поділена
+                 на 12 рівних колонок.
+            </p>
+            <p>
+                Для створення елементів сітки необхідно додати блоки з відповідними класами:
+            </p>
+            <p>
+                <code><span class="code-string">g-col-x</span></code> - даний клас вказує яку ширину буде займати
+                блок, де <code><span class="code-string">x</span></code> - кількість колонок з 12.
+            </p>
+            <h4>Зміна ширини колонок в залежності від розміру екрану</h4>
+            <p>
+                Для зміни ширини блоків в залежності від розміру екрану в імені класу використовуються префікси
+                 <code>-tab-</code> (tablet) для планшетів (ширина екрану більше 768px), та <code>-dt-</code> (desktop) 
+                 для компьютерів (ширина екрану більше 1024px), таким чином імена класів будуть мати наступний вигляд:<br> 
+                 <code><span class="code-string">g-tab-col-8</span></code> - для планшетів,<br>  
+                 <code><span class="code-string">g-dt-col-4</span></code> - для настольних ПК.<br> 
+                 Блок який має дані класи буде займати 8 колонок з 12 на планшеті та 4 колонки з 12 на компьютері.
+            </p>
+            <!--grid layout examples-->
+            <p>
+                Нижче наведені приклади сіток побудованих з допомогою описаних класів 
+                <em>(ширина колонок змінюється динамічно при зміні ширини вікна браузера)</em>:
+            </p>
+            <div class="g-container sample-row-block">
+                <div class="row-title"><code>class=<span class="code-string">"g-container"</span></code></div>
+                <div class="sample-col-block g-col-12 g-tab-col-6 g-dt-col-4">
+                    <code>class="</code><br>
+                        <span class="text-highlight">g-col-12</span><br>
+                        <span class="text-highlight-tab">g-tab-col-6</span><br>
+                        <span class="text-highlight-dt">g-dt-col-4</span><br>
+                        <code>"</code>
+                </div>
+                <div class="sample-col-block g-col-12 g-tab-col-6 g-dt-col-8">
+                    <code>class="</code><br>
+                        <span class="text-highlight">g-col-12</span><br>
+                        <span class="text-highlight-tab">g-tab-col-6</span><br>
+                        <span class="text-highlight-dt">g-dt-col-8</span><br>
+                        <code>"</code>
+                </div>
+            </div>
+<!--grid layout sample code-->
+<h4>HTML розмітка:</h4>
+<code class="code-block">
+<pre>
+&lt;div class=<span class="code-string">"g-container"</span>&gt;
+    &lt;div class=<span class="code-string">"g-col-12 g-tab-col-6 g-dt-col-4"</span>&gt;&lt;/div&gt;
+    &lt;div class=<span class="code-string">"g-col-12 g-tab-col-6 g-dt-col-8"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</code>
+            <div class="g-container sample-row-block">
+                <div class="row-title"><code>class=<span class="code-string">"g-container"</span></code></div>
+                <div class="sample-col-block g-col-4 g-dt-col-6">
+                    <code>class="</code><br>
+                        <span class="text-highlight">g-col-4</span><br>
+                        <span class="text-highlight-dt">g-dt-col-6</span><br>
+                        <code>"</code>
+                </div>
+                <div class="sample-col-block g-col-4 g-dt-col-6">
+                    <code>class="</code><br>
+                        <span class="text-highlight">g-col-4</span><br>
+                        <span class="text-highlight-dt">g-dt-col-6</span><br>
+                        <code>"</code>
+                </div>
+                <div class="sample-col-block g-col-4 g-dt-col-8">
+                    <code>class="</code><br>
+                        <span class="text-highlight">g-col-4</span><br>
+                        <span class="text-highlight-dt">g-dt-col-8</span><br>
+                        <code>"</code>
+                </div>
+                <div class="sample-col-block g-col-12 g-dt-col-4">
+                    <code>class="</code><br>
+                        <span class="text-highlight">g-col-12</span><br>
+                        <span class="text-highlight-dt">g-dt-col-4</span><br>
+                        <code>"</code>
+                </div>
+            </div>
+<!--grid layout sample code-->
+<h4>HTML розмітка:</h4>
+<code class="code-block">
+<pre>
+&lt;div class=<span class="code-string">"g-container"</span>&gt;
+    &lt;div class=<span class="code-string">"g-col-4 g-dt-col-6"</span>&gt;&lt;/div&gt;
+    &lt;div class=<span class="code-string">"g-col-4 g-dt-col-6"</span>&gt;&lt;/div&gt;
+    &lt;div class=<span class="code-string">"g-col-4 g-dt-col-8"</span>&gt;&lt;/div&gt;
+    &lt;div class=<span class="code-string">"g-col-12 g-dt-col-4"</span>&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</code>
         </section>
         <hr>
         <!--components-->
