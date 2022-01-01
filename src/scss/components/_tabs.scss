@@ -19,6 +19,7 @@
     .t-contents {
         position: relative;
         .tab-content {
+            display: none;
             background-color: #eee;
             padding: 2rem;
             position: absolute;
@@ -29,6 +30,7 @@
         }
         .show-content {
             z-index: 100;
+            display: block;
         }
         
     }

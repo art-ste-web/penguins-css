@@ -1192,6 +1192,7 @@ button.outline:hover {
 }
 
 .p-ui-tabs .t-contents .tab-content {
+  display: none;
   background-color: #eee;
   padding: 2rem;
   position: absolute;
@@ -1203,6 +1204,7 @@ button.outline:hover {
 
 .p-ui-tabs .t-contents .show-content {
   z-index: 100;
+  display: block;
 }
 
 .form-area {

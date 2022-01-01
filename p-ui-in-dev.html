@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документація PengUIns CSS</title>
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/scss/penguins-ui.css">
+    <!-- <link rel="stylesheet" href="css/penguins-ui.css"> -->
+    <link rel="stylesheet" href="css/penguins-ui-docs.css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="p-ui">
+    <main class="main-container" id="top">
+        <p><a href="penguins-ui-docs.html">На головну</a></p>
+        <article>
+            <h4>Поле для форми</h4>
+            <div class="form-area">
+                <div class="form-cage"></div>
+                    <div class="form-h">Зворотній зв'язок</div>
+                    <form action="#" method="POST" enctype="multipart/form-data" class="form__body">
+                        <div><input class="form-input" autocomplete="off" type="text" name="name" placeholder="Ім'я">
+                        </div>
+                        <div><input class="form-input" type="text" name="mail_phone"
+                                placeholder="E-mail чи номер телефона"></div>
+                        <div><textarea class="form-text form-input" name="text"
+                                placeholder="Ваші побажання"></textarea></textarea>
+                        </div>
+                        <button type="submit" class="form-btn">відправити</button>
+                    </form>
+                </div>
+            </div>
+            <h4>Примітки до форми:</h4>
+            <ul>
+                <li>клас<code>"form-cage"</code> контейнер для форми, додає відступи</li>
+                <li>клас<code>"form-h"</code> стилізує заголовок форми</li>
+                <li>клас<code>"form-input" "form-text"</code> стилізація полів вводу форми</li>
+                <li>клас<code>"form-btn"</code> стиль кнопки відправки</li>
+            </ul>
+            <hr>
+        </article>
+           
+
+        <section class="section-container"> 
+            <h4>CSS позиціонування. Різниця між <code>relative</code> та <code>absolute</code></h4>
+            <div class="position-container">
+                <div class="position-block">Я звичайний блок з <code>position: static</code> як і у всіх блоків за
+                    замовчуванням.
+                </div>
+            </div>
+            <div class="position-container"><div class="extra-padding">Я його елемент <br>вищого рівня -</div>
+                <div class="position-block-absolute">Я блок з <code>position: absolute; left: 200px; bottom: 10px;</code>. Я не впливаю
+                    на оточуючі блоки, та зміщуюся відносно елементу вищого рівня на відстані, вказані за допомогою властивостей
+                    <code>left, right, top, bottom</code>. Елемент вищого рівня має отримати властивість <code>position: relative</code>, інакше я буду позиціонуватися відносно всієї сторінки взагалі.
+                </div>
+            </div>
+            <div class="position-container">
+                <div class="position-block-relative">Я блок з <code>position: relative; right: 50px; top: 20px;</code>. Я впливаю
+                на оточуючі блоки, та зміщуюся відносно своєї позиції на відстані, вказані за допомогою властивостей
+                <code>left, right, top, bottom</code>.
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section class="section-container">
+            <h4 id="fonts">Шрифти</h4>
+            <div>
+                <p>Для додавання шрифтів використовуються класи з назвами формату: 
+                    <ul>
+                        <li><code>.font-*</code> - regular;</li>
+                        <li><code>.font-*-it</code> - italic;</li>
+                        <li><code>.font-*-b</code> - bold;</li>
+                    </ul>                
+                </p>
+                <p>Шрифти знаходяться у розділі base/_typography.scss</p>
+                <table>
+                    <caption>Шрифти у бібліотеці</caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                №
+                            </th>
+                            <th>
+                                Назва шрифта (*)
+                            </th>
+                            <th>
+                                Клас
+                            </th>
+                            <th>
+                                Приклад форматування
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                Lobster
+                            </td>
+                            <td>
+                                <code>.font-Lobster</code>
+                            </td>
+                            <td class='font-Lobster'>
+                                The quick brown fox jumps over the lazy dog.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                Festive
+                            </td>
+                            <td>
+                                <code>.font-Festive</code>
+                            </td>
+                            <td class="font-Festive">
+                                The quick brown fox jumps over the lazy dog.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="js/penguins-ui.js"></script>
+</body>
+</html>

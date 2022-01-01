@@ -32,7 +32,7 @@
                         <li><a href="#grid">Структура на Grid</a></li>
                         <li><a href="#text-components">Елементи форматування</a></li>
                         <li><a href="#ui-components">Елементи інтерфейсу</a></li>
-                        <li><a href="#fonts">Шрифти</a></li>
+                        <!-- <li><a href="#fonts">Шрифти</a></li> -->
                     </ul> 
                  </nav>
                  <hr>
@@ -61,6 +61,19 @@
             <p>
                 <a href="src/scss/penguins-ui.css"  download>Скачати penguins-ui.css</a>
             </p>
+            <p><em>Важливо!</em></p>
+            <p>Для роботи компонентів інтерфейсу бібліотеки, які позначені значком <span title="Цей елемент використовує JavaScript" class="js-badge">JS</span> у заголовку - необхідно <strong>підключити
+                JavaScript файл бібліотеки</strong> перед закриваючим тегом <code>&lt;body&gt;</code> документу:
+            </p>
+            <p>
+                <code>
+                    &lt;script src=<span class="code-string">"penguins-ui.js"</span>&gt;&lt;/script&gt;
+                </code>
+            </p>
+            
+            <p>
+                <a href="js/penguins-ui.js"  download>Скачати penguins-ui.js</a>
+            </p>
         </section>
         <hr>
         <!--how to use-->
@@ -72,6 +85,7 @@
                 Після цього CSS стилі бібліотеки будуть автоматично застосовані до елементів сторінки.
                 <strong>Весь контент документу повинен знаходитись всередині блоку з класом <code>main-container</code></strong>
             </p>
+            
             <h3 id="base-str">Базова структура документу</h3>
             <p>
                 Для вирівнювання контенту по центру документу потрібно створити
@@ -564,7 +578,7 @@
                     <code>&lt;button class=<span class="code-string">"neutral-btn outline"</span>&gt;Кнопка 3&lt;/button&gt;</code>
                 </li>
             </ul>
-            <h3>Вкладки <span title="Цей елемент потребує підключення 'penguins-ui.js'" class="js-badge">JS</span></h3>
+            <h3>Вкладки <span title="Цей елемент використовує JavaScript" class="js-badge">JS</span></h3>
             <div class="p-ui-tabs">
                 <div class="t-titles">
                     <div class="tab-title active-tab">Вкладка 1</div>
@@ -573,133 +587,48 @@
                 </div>
                 <div class="t-contents">
                     <div class="tab-content show-content">Контент вкладки 1</div>
-                    <div class="tab-content">Контент вкладки 2</div>
+                    <div class="tab-content">Контент вкладки 2<br> Lorem ipsum dolor sit
+                         amet consectetur adipisicing elit. Voluptatibus voluptatem dicta,
+                          totam nam ducimus laudantium debitis nostrum! Qui quidem mollitia,
+                           aut saepe modi dignissimos, ratione animi enim, asperiores officia omnis!</div>
                     <div class="tab-content">Контент вкладки 3</div>
-
                 </div>
             </div>
+            <p>
+                Компонент має наступну структуру:
+                
+            </p>
+<code class="code-block">
+    <pre>
+    &lt;div class=<span class="code-string">"p-ui-tabs"</span>&gt;
+        &lt;div class=<span class="code-string">"t-titles"</span>&gt;
+            &lt;div class=<span class="code-string">"tab-title active-tab"</span>&gt;Вкладка 1&lt;/div&gt;
+            &lt;div class=<span class="code-string">"tab-title"</span>&gt;Вкладка 2&lt;/div&gt;
+            &lt;div class=<span class="code-string">"tab-title"</span>&gt;Вкладка 3&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=<span class="code-string">"t-contents"</span>&gt;
+            &lt;div class=<span class="code-string">"tab-content show-content"</span>&gt;Контент вкладки 1&lt;/div&gt;
+            &lt;div class=<span class="code-string">"tab-content"</span>&gt;Контент вкладки 2&lt;/div&gt;
+            &lt;div class=<span class="code-string">"tab-content"</span>&gt;Контент вкладки 3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+</code> 
+            <p>Кількість елементів у блоках з класами <code><span class="code-string">t-titles</span></code> та
+                 <code><span class="code-string">t-contents</span></code> повинна бути однаковою. Змінити активну вкладку
+                 за замовчуванням можна додавши класс <code><span class="code-string">active-tab</span></code> до потрібної вкладки
+                і класс <code><span class="code-string">show-content</span></code> до блоку контенту, що відповідає данній вкладці.
+            </p>
         </section>
         
-        <h4>Наступні розділи в розробці...</h4>
+        
         <p>
             <a href="#top">До початку...</a>
         </p>
         <hr>
-        <article>
-            <h4>Поле для форми</h4>
-            <div class="form-area">
-                <div class="form-cage"></div>
-                    <div class="form-h">Зворотній зв'язок</div>
-                    <form action="#" method="POST" enctype="multipart/form-data" class="form__body">
-                        <div><input class="form-input" autocomplete="off" type="text" name="name" placeholder="Ім'я">
-                        </div>
-                        <div><input class="form-input" type="text" name="mail_phone"
-                                placeholder="E-mail чи номер телефона"></div>
-                        <div><textarea class="form-text form-input" name="text"
-                                placeholder="Ваші побажання"></textarea></textarea>
-                        </div>
-                        <button type="submit" class="form-btn">відправити</button>
-                    </form>
-                </div>
-            </div>
-            <h4>Примітки до форми:</h4>
-            <ul>
-                <li>клас<code>"form-cage"</code> контейнер для форми, додає відступи</li>
-                <li>клас<code>"form-h"</code> стилізує заголовок форми</li>
-                <li>клас<code>"form-input" "form-text"</code> стилізація полів вводу форми</li>
-                <li>клас<code>"form-btn"</code> стиль кнопки відправки</li>
-            </ul>
-            <hr>
-        </article>
-            </article>
-        </div>
-        
-        
-        
+        <p>Наступні розділи <a href="p-ui-in-dev.html"> в розробці...</a></p>
     </main>
-    <section class="section-container"> 
-        <h4>CSS позиціонування. Різниця між <code>relative</code> та <code>absolute</code></h4>
-        <div class="position-container">
-            <div class="position-block">Я звичайний блок з <code>position: static</code> як і у всіх блоків за
-                замовчуванням.
-            </div>
-        </div>
-        <div class="position-container"><div class="extra-padding">Я його елемент <br>вищого рівня -</div>
-            <div class="position-block-absolute">Я блок з <code>position: absolute; left: 200px; bottom: 10px;</code>. Я не впливаю
-                на оточуючі блоки, та зміщуюся відносно елементу вищого рівня на відстані, вказані за допомогою властивостей
-                <code>left, right, top, bottom</code>. Елемент вищого рівня має отримати властивість <code>position: relative</code>, інакше я буду позиціонуватися відносно всієї сторінки взагалі.
-            </div>
-        </div>
-        <div class="position-container">
-            <div class="position-block-relative">Я блок з <code>position: relative; right: 50px; top: 20px;</code>. Я впливаю
-            на оточуючі блоки, та зміщуюся відносно своєї позиції на відстані, вказані за допомогою властивостей
-            <code>left, right, top, bottom</code>.
-            </div>
-        </div>
-        <hr>
-    </section>
-    <section class="section-container">
-        <h4 id="fonts">Шрифти</h4>
-        <div>
-            <p>Для додавання шрифтів використовуються класи з назвами формату: 
-                <ul>
-                    <li><code>.font-*</code> - regular;</li>
-                    <li><code>.font-*-it</code> - italic;</li>
-                    <li><code>.font-*-b</code> - bold;</li>
-                </ul>                
-            </p>
-            <p>Шрифти знаходяться у розділі base/_typography.scss</p>
-            <table>
-                <caption>Шрифти у бібліотеці</caption>
-                <thead>
-                    <tr>
-                        <th>
-                            №
-                        </th>
-                        <th>
-                            Назва шрифта (*)
-                        </th>
-                        <th>
-                            Клас
-                        </th>
-                        <th>
-                            Приклад форматування
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            Lobster
-                        </td>
-                        <td>
-                            <code>.font-Lobster</code>
-                        </td>
-                        <td class='font-Lobster'>
-                            The quick brown fox jumps over the lazy dog.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            2
-                        </td>
-                        <td>
-                            Festive
-                        </td>
-                        <td>
-                            <code>.font-Festive</code>
-                        </td>
-                        <td class="font-Festive">
-                            The quick brown fox jumps over the lazy dog.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+    
     <script src="js/penguins-ui.js"></script>
 </body>
 </html>
