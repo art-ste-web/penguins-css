@@ -370,6 +370,8 @@ html {
   font-family: "Inter", sans-serif;
   color: #1E1E1E;
   padding-bottom: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .p-ui .main-container {
@@ -968,20 +970,50 @@ html {
   margin-left: -18px;
 }
 
+.p-ui ul.no-mark {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.p-ui ul.no-mark li::before {
+  display: none;
+}
+
+.p-ui ol {
+  font-size: 1rem;
+  margin: 12px 0 0 0;
+  counter-reset: item;
+  list-style-type: none;
+}
+
+.p-ui ol li {
+  line-height: 1.2rem;
+  margin-top: 8px;
+}
+
+.p-ui ol li::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: #E63946;
+  font-weight: bold;
+  display: inline-block;
+  width: 18px;
+  margin-left: -18px;
+}
+
 .p-ui a {
   text-decoration: none;
-  color: #6D6D6D;
+  color: #1E1E1E;
   border-bottom: 2px dashed #E63946;
-  -webkit-transition: all .2s;
-  transition: all .2s;
   line-height: 1.2rem;
 }
 
 .p-ui a:hover {
-  color: #1E1E1E;
-  border-bottom: 3px solid #E63946;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  border-bottom: 2px solid #E63946;
+}
+
+.p-ui em {
+  color: #E63946;
 }
 
 .p-ui blockquote {
@@ -1053,7 +1085,7 @@ html {
 }
 
 .p-ui table thead {
-  background-color: #a08f9050;
+  background-color: #eee;
 }
 
 .p-ui table caption {
@@ -1065,6 +1097,112 @@ html {
 
 .p-ui table th, .p-ui table td {
   padding: 18px;
+}
+
+button {
+  padding: .8rem 1.4rem;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+button:hover {
+  -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.primary-btn {
+  color: #fff;
+  background-color: #E63946;
+  font-weight: 300;
+}
+
+.secondary-btn {
+  color: #fff;
+  background-color: #1E1E1E;
+}
+
+.neutral-btn {
+  color: #6D6D6D;
+  background-color: #dddddd;
+}
+
+button.outline {
+  padding: .7rem 1.4rem;
+}
+
+button.outline:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #f1f1f1 !important;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.primary-btn.outline {
+  background-color: transparent;
+  color: #E63946;
+  border: 1px solid #E63946;
+}
+
+.secondary-btn.outline {
+  background-color: transparent;
+  color: #1E1E1E;
+  border: 1px solid #1E1E1E;
+}
+
+.neutral-btn.outline {
+  background-color: transparent;
+  color: #9C9C9C;
+  border: 1px solid #9C9C9C;
+}
+
+.p-ui-tabs {
+  margin: 1rem auto;
+  min-height: 10rem;
+}
+
+.p-ui-tabs .t-titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.p-ui-tabs .t-titles .tab-title {
+  padding: 1rem;
+  border-top: 4px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  cursor: pointer;
+}
+
+.p-ui-tabs .t-titles .active-tab {
+  border-top: 4px solid #E63946;
+  font-weight: 700;
+  background-color: #eee;
+}
+
+.p-ui-tabs .t-contents {
+  position: relative;
+}
+
+.p-ui-tabs .t-contents .tab-content {
+  background-color: #eee;
+  padding: 2rem;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.p-ui-tabs .t-contents .show-content {
+  z-index: 100;
 }
 
 .form-area {

@@ -1,0 +1,36 @@
+.p-ui-tabs {
+    margin: 1rem auto;
+    min-height: 10rem;
+    .t-titles {
+        display: flex;
+        flex-wrap: wrap;
+        .tab-title {
+            padding: 1rem;
+            border-top: 4px solid #cccccc;
+            border-right: 1px solid #cccccc;
+            cursor: pointer;
+        }
+        .active-tab {
+            border-top: 4px solid $accent-red;
+            font-weight: 700;
+            background-color: #eee;
+        }
+    }
+    .t-contents {
+        position: relative;
+        .tab-content {
+            background-color: #eee;
+            padding: 2rem;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .show-content {
+            z-index: 100;
+        }
+        
+    }
+
+}

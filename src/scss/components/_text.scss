@@ -56,20 +56,54 @@
             }
         }
     }
+    ul.no-mark {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+            &::before {
+                display: none;
+            }
+        }
+        
+    }
+
+    //ol
+    ol {
+        
+        font-size: 1rem;
+        margin: 12px 0 0 0;
+        counter-reset: item;
+        list-style-type: none;
+
+        li {
+            line-height: 1.2rem;
+            margin-top: 8px;
+            &::before {
+                content: counter(item) ". ";
+                counter-increment: item;
+                color: $accent-red;
+                font-weight: bold;
+                display: inline-block;
+                width: 18px;
+                margin-left: -18px;
+            }
+        }
+    }
 
     //link
     a {
         text-decoration: none;
-        color: $medium-grey;
+        color: $text-black;
         border-bottom: 2px dashed $accent-red;
-        transition: all .2s;
         line-height: 1.2rem;
 
         &:hover {
-            color: $text-black;
-            border-bottom: 3px solid $accent-red;
-            transition: all .2s;
+            border-bottom: 2px solid $accent-red;
         }
+    }
+    
+    em {
+        color: $accent-red;
     }
 
     //blockqoute

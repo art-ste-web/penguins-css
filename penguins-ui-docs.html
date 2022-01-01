@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Документація PengUIns CSS</title>
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="src/scss/penguins-ui.css">
     <!-- <link rel="stylesheet" href="css/penguins-ui.css"> -->
     <link rel="stylesheet" href="css/penguins-ui-docs.css">
@@ -29,7 +30,8 @@
                         <li><a href="#base-str">Базова структура</a></li>
                         <li><a href="#row-col">Cтруктура на Flexbox</a></li>
                         <li><a href="#grid">Структура на Grid</a></li>
-                        <li><a href="#components">Основні компоненти</a></li>
+                        <li><a href="#text-components">Елементи форматування</a></li>
+                        <li><a href="#ui-components">Елементи інтерфейсу</a></li>
                         <li><a href="#fonts">Шрифти</a></li>
                     </ul> 
                  </nav>
@@ -64,8 +66,9 @@
         <!--how to use-->
         <section id="using">
             <h2>Як використовувати?</h2>
+            <p><em>Важливо!</em></p>
             <p>
-                Потрібно додати CSS клас <code><span class="code-string">p-ui</span></code> до тегу <code>&lt;body&gt;</code>.
+                <strong>Потрібно додати CSS клас <code><span class="code-string">p-ui</span></code> до тегу <code>&lt;body&gt;</code></strong>.
                 Після цього CSS стилі бібліотеки будуть автоматично застосовані до елементів сторінки.
                 <strong>Весь контент документу повинен знаходитись всередині блоку з класом <code>main-container</code></strong>
             </p>
@@ -358,16 +361,18 @@
 </pre>
 </code>
         </section>
-        <hr>
-        <!--components-->
-        <section id="components">
-            <h2>Основні компоненти</h2>
+        <hr class="hr-red">
+        <!--text-components-->
+        <section id="text-components">
+            <h2>Елементи форматування тексту</h2>
+            <!--headers-->
             <h3>Заголовки <code>&lt;h1&gt;-&lt;h5&gt;</code>:</h3>
             <h1>Заголовок 1</h1>
             <h2>Заголовок 2</h2>
             <h3>Заголовок 3</h3>
             <h4>Заголовок 4</h4>
             <h5>Заголовок 5</h5>
+            <!--paragraph-->
             <h3>Параграф тексту <code>&lt;p&gt;</code> та посилання <code>&lt;a&gt;</code>:</h3>
             <p>
                 По весні <a target="_blank" href="http://www.nbuv.gov.ua/node/4171">1663 року</a> двоє подорожніх, верхи на добрих конях,
@@ -378,20 +383,48 @@
                    Коні в їх потомлені, одежа й тороки позапилювані: зараз було
                  знати, що ідуть не зблизька.
             </p>
-            <h3>Маркерований список <code>&lt;ul&gt;</code>:</h3>
+            <!--inline elements-->
+            <h3>Строчні елементи: <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;del&gt;</code>:</h3>
+            <ul class="no-mark">
+                <li><code>&lt;em&gt;</code><em>виділений текст</em><code>&lt;/em&gt;</code></li>
+                <li><code>&lt;strong&gt;</code><strong>виділений текст</strong><code>&lt;/strong&gt;</code></li>
+                <li><code>&lt;del&gt;</code><del>закреслений текст</del><code>&lt;/del&gt;</code></li>
+            </ul>
+            <!--list-->
+            <h3>Списки:</h3>
+            <h4>Маркерований список <code>&lt;ul&gt;</code></h4>
             <ul>
                 <li>Пункт 1</li>
                 <li>Пункт 2</li>
                 <li>Пункт 3</li>
                 <li>Пункт 4</li>
             </ul>
+            <h4>Список без маркерів <code> &lt;ul class=<span class="code-string">"no-mark"</span>&gt;</code></h4>
+            <ul class="no-mark">
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+                <li>Пункт 3</li>
+                <li>Пункт 4</li>
+            </ul>
+            <h4>Нумерований список <code>&lt;ol&gt;</code>:</h4>
+            <ol>
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+                <li>Пункт 3</li>
+                <li>Пункт 4</li>
+            </ol>
+            <!--blockqoute-->
             <h3>Виділений текст, цитата <code>&lt;blockqoute&gt;</code>:</h3>
             <blockquote>
                 Коні в їх потомлені, одежа й тороки позапилювані: зараз було
                 знати, що ідуть не зблизька.
             </blockquote>
+            <!--hr-->
             <h3>Горизонтальна лінія <code>&lt;hr&gt;</code>:</h3>
             <hr>
+            <h4>Червона горизонтальна лінія <code> &lt;hr class=<span class="code-string">"hr-red"</span>&gt;</code></h4>
+            <hr class="hr-red">
+            <!--table-->
             <h3>Таблиці <code>&lt;table&gt;</code>:</h3>
             <table>
                 <caption>Українські письменники</caption>
@@ -451,6 +484,7 @@
                     </tr>
                 </tbody>
             </table>
+            <!--code-->
             <h3>Блок коду <code>&lt;code&gt;</code>:</h3>
             <code class="code-block">
                 &lt;head&gt;
@@ -500,7 +534,52 @@
                 }
             </code>
         </section>
-        <hr>
+        <hr class="hr-red">
+        <!--ui elements-->
+        <section id="ui-components">
+            <h2>Елементи інтерфейсу користувача (UI)</h2>
+            <h3>Кнопки</h3>
+            <p>Основні:</p>
+            <ul class="no-mark btns-sample">
+                <li><button class="primary-btn">Кнопка 1</button>
+                       <code>&lt;button class=<span class="code-string">"primary-btn"</span>&gt;Кнопка 1&lt;/button&gt;</code>
+                </li>
+                <li><button class="secondary-btn">Кнопка 2</button>
+                    <code>&lt;button class=<span class="code-string">"secondary-btn"</span>&gt;Кнопка 2&lt;/button&gt;</code>
+                </li>
+                <li><button class="neutral-btn">Кнопка 3</button>
+                    <code>&lt;button class=<span class="code-string">"neutral-btn"</span>&gt;Кнопка 3&lt;/button&gt;</code>
+                </li>
+            </ul>
+               
+            <p>Другорядні:</p>
+            <ul class="no-mark btns-sample">
+                <li><button class="primary-btn outline">Кнопка 1</button>
+                       <code>&lt;button class=<span class="code-string">"primary-btn outline"</span>&gt;Кнопка 1&lt;/button&gt;</code>
+                </li>
+                <li><button class="secondary-btn outline">Кнопка 2</button>
+                    <code>&lt;button class=<span class="code-string">"secondary-btn outline"</span>&gt;Кнопка 2&lt;/button&gt;</code>
+                </li>
+                <li><button class="neutral-btn outline">Кнопка 3</button>
+                    <code>&lt;button class=<span class="code-string">"neutral-btn outline"</span>&gt;Кнопка 3&lt;/button&gt;</code>
+                </li>
+            </ul>
+            <h3>Вкладки <span title="Цей елемент потребує підключення 'penguins-ui.js'" class="js-badge">JS</span></h3>
+            <div class="p-ui-tabs">
+                <div class="t-titles">
+                    <div class="tab-title active-tab">Вкладка 1</div>
+                    <div class="tab-title">Вкладка 2</div>
+                    <div class="tab-title">Вкладка 3</div>
+                </div>
+                <div class="t-contents">
+                    <div class="tab-content show-content">Контент вкладки 1</div>
+                    <div class="tab-content">Контент вкладки 2</div>
+                    <div class="tab-content">Контент вкладки 3</div>
+
+                </div>
+            </div>
+        </section>
+        
         <h4>Наступні розділи в розробці...</h4>
         <p>
             <a href="#top">До початку...</a>
@@ -621,5 +700,6 @@
             </table>
         </div>
     </section>
+    <script src="js/penguins-ui.js"></script>
 </body>
 </html>

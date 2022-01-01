@@ -1,0 +1,55 @@
+button {
+    padding: .8rem 1.4rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    &:hover {
+        box-shadow: 4px 4px 12px rgba($color: #000000, $alpha: .2);
+        transition: all .2s ease-in;
+    }
+}
+
+.primary-btn {
+    color: #fff;
+    background-color: $accent-red;
+    font-weight: 300;
+    
+}
+
+.secondary-btn {
+    color: #fff;
+    background-color: $text-black;
+}
+
+.neutral-btn {
+    color: $medium-grey;
+    background-color: #dddddd;
+}
+
+button.outline {
+    padding: .7rem 1.4rem;
+        &:hover {
+        box-shadow: none;
+        background-color: #f1f1f1 !important;
+        transition: all .2s ease-in;
+    }
+}
+.primary-btn.outline {
+    background-color: transparent;
+    color: $accent-red;
+    border: 1px solid $accent-red;
+}
+
+.secondary-btn.outline {
+    background-color: transparent;
+    color: $text-black;
+    border: 1px solid $text-black;
+    
+}
+.neutral-btn.outline {
+    background-color: transparent;
+    color: $light-grey;
+    border: 1px solid $light-grey;
+    
+}

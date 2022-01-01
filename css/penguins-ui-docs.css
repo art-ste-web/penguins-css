@@ -40,6 +40,28 @@ body {
     font-weight: 700;
     color: #E63946;
 }
+
+
+/*buttons sample*/
+.btns-sample li {
+    margin-bottom: 1rem;
+}
+.btns-sample li button {
+    margin-right: 1rem;
+}
+
+
+/*JS badge for components*/
+.js-badge {
+    color: #fff;
+    background-color: #E63946;
+    font-size: 1rem;
+    padding: .25rem;
+    border-radius: 3px;
+    margin-left: 1rem;
+    cursor: help;
+}
+
 @media (min-width: 769px) {
     .p-ui .sample-col-block .text-highlight {
         color: #1E1E1E;
