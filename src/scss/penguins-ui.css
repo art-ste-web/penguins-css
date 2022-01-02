@@ -376,7 +376,7 @@ html {
 
 .p-ui .main-container {
   max-width: 1200px;
-  min-width: 360px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 16px;
 }
@@ -1029,6 +1029,7 @@ html {
 
 .p-ui pre {
   font-family: "Source Code Pro", monospace;
+  white-space: pre-wrap;
 }
 
 .p-ui code {
@@ -1082,10 +1083,19 @@ html {
   border-collapse: collapse;
   border: 1px solid #a08f9050;
   font-size: .9rem;
+  overflow-x: auto;
+  display: block;
 }
 
 .p-ui table thead {
   background-color: #eee;
+  display: table;
+  width: 100%;
+}
+
+.p-ui table tbody {
+  display: table;
+  width: 100%;
 }
 
 .p-ui table caption {
@@ -1093,6 +1103,8 @@ html {
   padding: 4px;
   font-weight: 700;
   text-align: left;
+  width: 60%;
+  display: block;
 }
 
 .p-ui table th, .p-ui table td {

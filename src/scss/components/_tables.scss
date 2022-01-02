@@ -5,9 +5,17 @@
         border-collapse: collapse;
         border: 1px solid $hr-grey;
         font-size: .9rem;
+        overflow-x: auto;
+        display: block;
 
         thead {
             background-color: #eee;
+            display: table;
+            width: 100%;
+        }
+        tbody {
+            display: table;
+            width: 100%;
         }
 
         caption {
@@ -15,6 +23,8 @@
             padding: 4px;
             font-weight: 700;
             text-align: left;
+            width: 60%;
+            display: block;
         }
 
         th, td {

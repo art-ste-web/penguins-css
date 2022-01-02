@@ -121,6 +121,7 @@
     //code
     pre {
         font-family: $code-font;
+        white-space: pre-wrap;
     }
     code {
         font-family: $code-font;
