@@ -7,9 +7,7 @@ if(tabs) {
 function tabsHandler() {
     const tabsTitles = document.querySelectorAll('.tab-title');
     const tabsContents = document.querySelectorAll('.tab-content');
-    // console.log(tabsTitles);
-    // console.log(tabsContents);
-
+   
     //count number of tab titles, add attr with number and event listnener for handle click
     for(let i=0; i<tabsTitles.length; i++) {
         //console.log(tabsTitles[i]);
@@ -22,20 +20,9 @@ function tabsHandler() {
     let elHeights = [];
     for(let i=0; i<tabsContents.length; i++) {
         tabsContents[i].setAttribute('data-content-num', [i]);
-        //console.log(tabsContents[i].offsetHeight);
-        elHeights.push(tabsContents[i].offsetHeight);
+        
     }
-    //console.log(elHeights);
-    let maxHeight = getMaxHeight(elHeights);
-
-    //set height of tabs block
-    tabs.style.height = maxHeight+120+'px';
-    //console.log(maxHeight);
-}
-
-//get max content block height
-function getMaxHeight(elHeights) {
-    return Math.max.apply(null, elHeights);
+    
 }
 
 //handle click on tabs titles and show tabs content

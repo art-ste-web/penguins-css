@@ -913,52 +913,52 @@ html {
 }
 
 .p-ui h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin: 32px 0 0 0;
+  margin: 2.8rem 0 0 0;
 }
 
 .p-ui h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin: 24px 0 0 0;
+  margin: 2.2rem 0 0 0;
 }
 
 .p-ui h3 {
   font-size: 1.4rem;
   font-weight: 700;
-  margin: 24px 0 0 0;
+  margin: 1.8rem 0 0 0;
 }
 
 .p-ui h4 {
   font-size: 1.2rem;
   font-weight: 700;
   color: #6D6D6D;
-  margin: 20px 0 0 0;
+  margin: 1.2rem 0 0 0;
 }
 
 .p-ui h5 {
   font-size: 1rem;
   font-weight: 700;
   color: #6D6D6D;
-  margin: 20px 0 0 0;
+  margin: 1rem 0 0 0;
 }
 
 .p-ui p {
   font-size: 1rem;
-  line-height: 28px;
-  margin: 8px 0 0 0;
+  line-height: 1.5;
+  margin: .5rem 0 0 0;
 }
 
 .p-ui ul {
   list-style-type: none;
   font-size: 1rem;
-  margin: 12px 0 0 0;
+  margin: .6rem 0 0 0;
 }
 
 .p-ui ul li {
   line-height: 1.2rem;
-  margin-top: 8px;
+  margin-top: .5rem;
 }
 
 .p-ui ul li::before {
@@ -966,8 +966,8 @@ html {
   color: #E63946;
   font-weight: bold;
   display: inline-block;
-  width: 18px;
-  margin-left: -18px;
+  width: 1.1rem;
+  margin-left: -1.1rem;
 }
 
 .p-ui ul.no-mark {
@@ -981,14 +981,14 @@ html {
 
 .p-ui ol {
   font-size: 1rem;
-  margin: 12px 0 0 0;
+  margin: .6rem 0 0 0;
   counter-reset: item;
   list-style-type: none;
 }
 
 .p-ui ol li {
   line-height: 1.2rem;
-  margin-top: 8px;
+  margin-top: .5rem;
 }
 
 .p-ui ol li::before {
@@ -997,8 +997,8 @@ html {
   color: #E63946;
   font-weight: bold;
   display: inline-block;
-  width: 18px;
-  margin-left: -18px;
+  width: 1.1rem;
+  margin-left: -1.1rem;
 }
 
 .p-ui a {
@@ -1018,8 +1018,8 @@ html {
 
 .p-ui blockquote {
   font-size: 1.1rem;
-  margin: 16px 16px 0 48px;
-  padding: 32px 8px 32px 16px;
+  margin: 1rem 1rem 0 3rem;
+  padding: 2rem .5rem 2rem 1rem;
   font-family: "Inter", sans-serif;
   font-weight: 700;
   line-height: 1.1rem;
@@ -1051,12 +1051,12 @@ html {
 }
 
 .p-ui code .code-margin {
-  margin: 0 0 0 32px;
+  margin: 0 0 0 2rem;
 }
 
 .p-ui .code-block {
   display: block;
-  margin: 12px 0 0 0;
+  margin: .6rem 0 0 0;
 }
 
 .p-ui .img-block {
@@ -1207,11 +1207,6 @@ button.outline:hover {
   display: none;
   background-color: #eee;
   padding: 2rem;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 .p-ui-tabs .t-contents .show-content {
